@@ -30,8 +30,7 @@ def group_posts(request, slug):
         'posts': posts,
         'for_loop': 'includes/for_loop.html',
         'paginator': 'includes/paginator.html',
-        'page_obj': page_obj,
-        'community_posts': 'Записи сообщества:'
+        'page_obj': page_obj
     }
     return render(request, 'posts/group_list.html', context)
 

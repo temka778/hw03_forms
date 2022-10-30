@@ -5,7 +5,9 @@ User = get_user_model()
 
 
 class Post(models.Model):
-    text = models.TextField()
+    text = models.TextField(
+        verbose_name='текст',
+        help_text='текст публикации')
     pub_date = models.DateTimeField(auto_now_add=True)
     author = models.ForeignKey(
         User,
@@ -17,8 +19,9 @@ class Post(models.Model):
         blank=True,
         null=True,
         on_delete=models.SET_NULL,
-        related_name='posts'
-    )
+        related_name='posts',
+        verbose_name = 'группа',
+        help_text='выберите группу публикаций')
 
     class Meta:
         ordering = ['-pub_date', ]
