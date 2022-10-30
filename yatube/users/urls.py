@@ -1,4 +1,11 @@
-from django.contrib.auth.views import *
+from django.contrib.auth.views import (LoginView,
+                                       LogoutView,
+                                       PasswordResetDoneView,
+                                       PasswordResetView,
+                                       PasswordChangeDoneView,
+                                       PasswordChangeView,
+                                       PasswordResetCompleteView,
+                                       PasswordResetConfirmView)
 from django.urls import path
 
 
