@@ -20,13 +20,13 @@ class Post(models.Model):
         null=True,
         on_delete=models.SET_NULL,
         related_name='posts',
-        verbose_name = 'группа',
+        verbose_name='группа',
         help_text='выберите группу публикаций')
 
     class Meta:
         ordering = ['-pub_date', ]
-        verbose_name = 'Пост'
-        verbose_name_plural = 'Посты'
+        verbose_name='Пост'
+        verbose_name_plural='Посты'
 
     def __str__(self):
         return self.text
