@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}Последние обновления на сайте{% endblock %}
+{% block content %}
+  <h1>Это главная страница проекта Yatube</h1>
+  {% for post in page_obj %}
+    {% include for_loop with all_posts='True' %}
+  {% endfor %}
+  {% include paginator %}
+{% endblock %}
