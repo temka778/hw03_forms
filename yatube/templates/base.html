@@ -11,8 +11,6 @@
     <meta name="msapplication-TileColor" content="#000">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
-    <!--Хотел добавить кнопку, но понял, что вообще не успеваю... просто бы сдать проект...-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <title>
       {% block title %}
         Тут должно быть имя вкладки.
@@ -28,9 +26,10 @@
         {% block content %}
           Контент не подвезли...
         {% endblock %}
+        {% include 'includes/paginator.html' %}
       </div>
     </main>
-    <footer class="footer">
+    <footer class="border-top text-center py-3">
       {% include 'includes/footer.html' %} 
     </footer>
   </body>

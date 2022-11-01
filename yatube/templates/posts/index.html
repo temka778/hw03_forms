@@ -3,7 +3,6 @@
 {% block content %}
   <h1>Это главная страница проекта Yatube</h1>
   {% for post in page_obj %}
-    {% include for_loop with all_posts='True' %}
+    {% include 'includes/for_loop.html' with alll_posts='True' not_a_profile='True' %}
   {% endfor %}
-  {% include paginator %}
 {% endblock %}

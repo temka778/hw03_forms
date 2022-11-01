@@ -4,7 +4,6 @@
   {% block header %}<h1>{{ group.title }}</h1>{% endblock %}
   <p>{{ group.description }}</p>
   {% for post in page_obj %}
-    {% include for_loop %}
+    {% include 'includes/for_loop.html' with not_a_profile='True' %}
   {% endfor %}
-  {% include paginator %}
 {%endblock%}
