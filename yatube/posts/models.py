@@ -25,7 +25,7 @@ class Post(models.Model):
         ordering = ('-pub_date', )
         verbose_name = 'Пост'
         verbose_name_plural = 'Посты'
-        default_related_name= 'posts'
+        default_related_name = 'posts'
 
     def __str__(self):
         return self.text[:200]
