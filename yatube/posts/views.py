@@ -8,7 +8,6 @@ from .utils import page_navigation
 def index(request):
     posts = Post.objects.select_related('group')
     context = {
-        'posts': posts,
         'page_obj': page_navigation(posts, request)
     }
     return render(request, 'posts/index.html', context)
@@ -19,7 +18,6 @@ def group_posts(request, slug):
     posts = group.posts.select_related('group')
     context = {
         'group': group,
-        'posts': posts,
         'page_obj': page_navigation(posts, request)
     }
     return render(request, 'posts/group_list.html', context)
